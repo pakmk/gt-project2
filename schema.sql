@@ -1,4 +1,4 @@
--- Drops the todolist if it exists currently --
+-- Drops the db if it exists currently --
 DROP DATABASE IF EXISTS test_db;
--- Creates the "todolist" database --
+-- Creates the database --
 CREATE DATABASE test_db;
