@@ -13,4 +13,11 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/artist-dash", (req, res) => {
+  res.render("artist-dash");
+});
+
+router.get("/trending", (req, res) => {
+  res.render("trending");
+});
 module.exports = router;
