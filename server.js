@@ -4,6 +4,7 @@ const exphbs = require("express-handlebars");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
+var bcryptjs = require("bcryptjs");
 
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
