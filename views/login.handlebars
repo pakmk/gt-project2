@@ -1,18 +1,56 @@
-  <nav>
-    <div class="nav-wrapper">
-      <a href="/index" class="brand-logo">Creative Meet</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/signup">Sign Up</a></li>
-        <li><a href="/login">Login</a></li>
-      </ul>
-    </div>
-  </nav>
+<!--Navbar-->
+<nav class="navbar navbar-light navbar-1 white">
 
-  <div class="main">
-    <p class="sign" align="center">Login</p>
-    <form class="form1">
-      <input class="un " type="text" align="center" placeholder="Email">
-      <input class="pass" type="password" align="center" placeholder="Password">
-      <a class="submit" align="center">Login</a>
-      <p class="forgot" align="center"><a href="/signup">Sign Up</p>
-    </div>
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="/">Creative Meet</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+    aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span
+      class="navbar-toggler-icon"></span></button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/signup">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+    </ul>
+    <!-- Links -->
+
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+
+<!-- Default form login -->
+<div class="container">
+  <form class="text-center border border-light p-5" action="#!">
+
+    <p class="h4 mb-4">Login</p>
+
+    <!-- Email -->
+    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Email">
+
+    <!-- Password -->
+    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+
+    <!-- Register -->
+    <p>
+      <a href="/signup">Sign Up</a>
+    </p>
+  </form>
+</div>
+<!-- Default form login -->
