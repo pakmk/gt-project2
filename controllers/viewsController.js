@@ -20,4 +20,8 @@ router.get("/artist-dash", (req, res) => {
 router.get("/trending", (req, res) => {
   res.render("trending");
 });
+
+router.get("/artist-post", (req, res) => {
+  res.render("artist-post");
+});
 module.exports = router;
