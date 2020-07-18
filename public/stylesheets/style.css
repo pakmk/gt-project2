@@ -1,8 +1,14 @@
 
 body {
     background-color: #F3EBF6;
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+    background-image: url(../Assets/green-2721758_1280.png);
   }
+
+#search {
+  background-color: peachpuff;
+  border-radius: 25px;
+}
   .main {
     background-color: #FFFFFF;
     width: 400px;
