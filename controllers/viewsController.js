@@ -21,7 +21,11 @@ router.get("/artist-dash", (req, res) => {
   res.render("artist-dash");
 });
 
-router.get("/newest", (req, res) => {
-  res.render("newest");
+router.get("/artist-post", (req, res) => {
+  res.render("artist-post");
+});
+
+router.get("/trending", (req, res) => {
+  res.render("trending");
 });
 module.exports = router;
