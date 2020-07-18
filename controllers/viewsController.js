@@ -5,6 +5,10 @@ router.get("/", (req, res) => {
   res.render("index");
 });
 
+router.get("/index", (req, res) => {
+  res.render("index");
+});
+
 router.get("/signup", (req, res) => {
   res.render("signup");
 });
@@ -15,6 +19,10 @@ router.get("/login", (req, res) => {
 
 router.get("/artist-dash", (req, res) => {
   res.render("artist-dash");
+});
+
+router.get("/artist-post", (req, res) => {
+  res.render("artist-post");
 });
 
 router.get("/trending", (req, res) => {
