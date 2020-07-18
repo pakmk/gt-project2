@@ -10,7 +10,7 @@ const exphbs = require("express-handlebars");
  */
 const PORT = process.env.PORT || 8080;
 const app = express();
-const db = require("./models");
+const db = require("./models/creatives.js");
 const ViewsController = require("./controllers/viewsController.js");
 const APIController = require("./controllers/apiController");
 const UsersController = require("./controllers/usersController");
