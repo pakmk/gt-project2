@@ -1,0 +1,17 @@
+<section id="gigs" class="container">
+    <h1>All Gigs</h1>
+
+    {{#each creatives}}
+    <div class="gig">
+        <h3>{{name}}</h3>
+        <p>{{bio}}</p>
+        <ul>
+            <li>Post id: {{post_id}}</li>
+            <li>Media id: {{budget}}</li>
+        </ul>
+    </div>
+    {{else}}
+    <p>No posts yet</p>
+    {{/each}}
+
+</section>
