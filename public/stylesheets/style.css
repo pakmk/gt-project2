@@ -9,6 +9,18 @@
   margin-right: auto;
 }
 
+.navbar {
+  background-color: rebeccapurple;
+}
   .main {
     border-radius: 0px;
+  }
+
+  #search {
+    background-color: peachpuff;
+    border-radius: 25px;
+  }
+
+  body{
+    /* background-image: url(../Assets/green-2721758_1280.png); */
   }
