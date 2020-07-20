@@ -28,6 +28,7 @@ var passport = require("../config/passport");
   router.post("/api/signup", function(req, res) {
     console.log(req.body);
     db.User.create({
+      id: req.body.id,
       email: req.body.email,
       password: req.body.password
     })
@@ -41,11 +42,28 @@ var passport = require("../config/passport");
       });
   });
 
+  router.post("/api/artist-dash", function(req, res) {
+    console.log(req.body);
+    db.ArtistsDash.create({
+      id: req.body.id,
+      name: req.body.name,
+      bio: req.body.bio
+    })
+      .then(function(dbUser) {
+        // res.redirect(307, "/api/login");
+        res.json(dbUser)
+      })
+      .catch(function(err) {
+        // res.status(401).json(err);
+        res.json(err)
+      });
+  });
   // Route for logging user out
   router.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/");
   });
+
 
   // Route for getting some data about our user to be used client side
   router.get("/api/user_data", function(req, res) {
