@@ -9,7 +9,7 @@ module.exports = function (sequelize, DataTypes) {
     //   autoIncrement: true,
     // },
     title: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     //   type moved to media table

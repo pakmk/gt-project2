@@ -61,7 +61,7 @@ var passport = require("../config/passport");
   // Route for logging user out
   router.get("/logout", function(req, res) {
     req.logout();
-    res.redirect("/");
+    res.redirect("/login");
   });
 
 
