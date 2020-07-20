@@ -1,18 +1,19 @@
 $(document).ready(function() {
     // Getting references to our form and input
     var artistDashboard = $("form#createName");
-    const nameInput = $("button#name-btn1");
-    const bioInput = $("input#bio-btn");
+    const inputButton = $("button#name-btn1");
+    const nameButton = $("input#name-input");
+    const bioButton = $("input#bio-input")
     const worksInput = $("input#works-btn");
     // When the signup button is clicked, we validate the email and password are not blank
-    artistDashboard.on("click", function(event) {
+    inputButton.on("click", function(event) {
       event.preventDefault();
       console.log("you clicked")
       var userData = {
-        name: nameInput.val().trim(),
-        bio: bioInput.val().trim()
+        name: nameButton.val().trim(),
+        bio: bioButton.val().trim()
       };
-  
+    console.log(userData);
       // if (!userData.name || !userData.bio) {
       //   return;
       // }
@@ -34,7 +35,7 @@ $(document).ready(function() {
         .then(function(data) {
           console.log(data)
         //   res.redirect("/")
-          window.location.replace("/");
+          // window.location.replace("/");
           // If there's an error, handle it by throwing up a bootstrap alert
         })
         .catch(handleLoginErr);
