@@ -1,3 +1,5 @@
+const Posts = require("../../models/Posts");
+
 $(document).ready(function() {
     // Getting references to our form and input
     var postForm = $("form#post");
@@ -12,9 +14,7 @@ $(document).ready(function() {
         title: titleInput.val().trim(),
         body: textInput.val().trim()
       };
-      console.log(userData)
-      return userData;
-      
+      console.log(userData)    
       // if (!userData.email || !userData.password) {
       //   return;
       // }
@@ -33,7 +33,7 @@ $(document).ready(function() {
       //   }
       // );
     });
-    post();
+   
   
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors

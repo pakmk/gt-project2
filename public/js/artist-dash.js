@@ -14,17 +14,18 @@ $(document).ready(function() {
         bio: bioButton.val().trim()
       };
     console.log(userData);
+    postName(userData);
       // if (!userData.name || !userData.bio) {
       //   return;
       // }
-      return userData;
+      // return userData;
       // If we have an email and password, run the signUpUser function
       
       // postName(userData.name, userData.bio);
       // nameInput.val("");
       // bioInput.val("");
     });
-  postName();
+
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors
     function postName(name, bio) {
@@ -33,7 +34,7 @@ $(document).ready(function() {
         bio: bio
       })
         .then(function(data) {
-          console.log(data)
+          console.log({data})
         //   res.redirect("/")
           // window.location.replace("/");
           // If there's an error, handle it by throwing up a bootstrap alert

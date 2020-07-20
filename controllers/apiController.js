@@ -42,20 +42,12 @@ var passport = require("../config/passport");
       });
   });
 
-<<<<<<< HEAD
-  router.post("/api/posts", function(req, res) {
-    console.log(req.body);
-    db.Post.create({
-      title: req.body.title,
-      body: req.body.body
-=======
   router.post("/api/artist-dash", function(req, res) {
     console.log(req.body);
     db.ArtistsDash.create({
       id: req.body.id,
       name: req.body.name,
       bio: req.body.bio
->>>>>>> 9b9e007c14865c37ac13c13592a1bb367e94bbac
     })
       .then(function(dbUser) {
         // res.redirect(307, "/api/login");
@@ -66,10 +58,6 @@ var passport = require("../config/passport");
         res.json(err)
       });
   });
-<<<<<<< HEAD
-
-=======
->>>>>>> 9b9e007c14865c37ac13c13592a1bb367e94bbac
   // Route for logging user out
   router.get("/logout", function(req, res) {
     req.logout();
