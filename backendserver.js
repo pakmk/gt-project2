@@ -1,6 +1,7 @@
 // Requiring necessary npm packages
 var express = require("express");
 const exphbs = require("express-handlebars");
+const bodyParser = require("body-parser");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
@@ -8,7 +9,7 @@ var bcryptjs = require("bcryptjs");
 
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
-var db = require("./models");
+var db = require("./models/Index");
 
 // Creating express app and configuring middleware needed for authentication
 var app = express();
@@ -27,8 +28,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Requiring our routes
-// require("./routes/html-routes.js")(app);
-// require("./routes/api-routes.js")(app);
 const ViewsController = require("./controllers/viewsController.js");
 const APIController = require("./controllers/apiController");
 const UsersController = require("./controllers/usersController");

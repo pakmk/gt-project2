@@ -1,23 +1,16 @@
-/**
- * REQUIRE NPM PACKAGES
- * REQUIRE EXTERNAL FILES
- */
+// REQUIRE NPM PACKAGES & EXTERNAL FILES
 const express = require("express");
 const exphbs = require("express-handlebars");
 
-/**
- * DEFINE VARIABLES
- */
+// DEFINE VARIABLES
 const PORT = process.env.PORT || 8080;
 const app = express();
-const db = require("./models");
+const db = require("./models/Index");
 const ViewsController = require("./controllers/viewsController.js");
 const APIController = require("./controllers/apiController");
 const UsersController = require("./controllers/usersController");
 
-/**
- * MIDDLEWARE
- */
+// MIDDLEWARE
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -25,23 +18,19 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-/**
- * VIEW ROUTES
- * API ROUTES
- */
 // Serve static content for the app from the "public" directory in the application directory.
 // app.use(express.static("public"));
 app.use(express.static(__dirname));
 
-// Routes
+// VIEW ROUTES
 app.use(ViewsController);
 app.use(APIController);
 app.use("/api/users", UsersController);
 
-/**
- * DB Connection
- * APP LISTEN
- */
+// API ROUTES
+
+// DB Connection
+
 db.sequelize
   .sync()
   .then(() => {
