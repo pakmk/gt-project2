@@ -1,7 +1,7 @@
-// Creating our Media model
+// Creating our Post model
 
 module.exports = function (sequelize, DataTypes) {
-  var Media = sequelize.define("Media", {
+  var Posts = sequelize.define("Post", {
     // The email cannot be null, and must be a proper email before creation
     // id: {
     //   type: DataTypes.INTEGER,
@@ -9,17 +9,18 @@ module.exports = function (sequelize, DataTypes) {
     //   autoIncrement: true,
     // },
     title: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    type: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    link: {
+    //   type moved to media table
+    /* type: {
+            type: DataTypes.STRING,
+            allowNull: false,
+          }, */
+    body: {
       type: DataTypes.STRING,
       allowNull: false,
     },
   });
-  return Media;
+  return Posts;
 };

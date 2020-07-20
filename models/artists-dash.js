@@ -1,13 +1,13 @@
 // Creating our Creative model 
 
 module.exports = function(sequelize, DataTypes) {
-  var Creatives = sequelize.define("Creative", {
+  var ArtistsDash = sequelize.define("ArtistsDash", {
     // The email cannot be null, and must be a proper email before creation
-    id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
-      },
+    // id: {
+    //     type: DataTypes.INTEGER,
+    //     primaryKey: true,
+    //     autoIncrement: true,
+    //   },
       name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -21,10 +21,10 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      media_id: {
+      works_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
   });
-  return Creatives;
+  return ArtistsDash;
 };
