@@ -8,24 +8,24 @@ router.post("/", (req, res) => {
   });
 });
 
-// router.post("/", (req, res) => {
-//   db.newUser.create(req.body)
-//     .then((result) => {
-//       res.json({
-//         error: false,
-//         data: result,
-//         message: "New user",
-//       });
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//       res.status(500).json({
-//         error: true,
-//         data: null,
-//         message: "Unable to create new user.",
-//       });
-//     });
-// });
+router.post("/", (req, res) => {
+  db.User.create(req.body)
+    .then((result) => {
+      res.json({
+        error: false,
+        data: result,
+        message: "New user",
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "Unable to create new user.",
+      });
+    });
+});
 
 router.put("/:id", (req, res) => {
   res.json({
