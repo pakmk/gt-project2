@@ -34,12 +34,12 @@ $(document).ready(function() {
     //     }
     //   );
     function loginUser(email, password) {
-        $.post("/api/signup", {
+        $.post("/api/login", {
           email: email,
           password: password
         })
           .then(function(data) {
-            console.log(data)
+            console.log(data);
             window.location.replace("/");
             // res.redirect("/")
             // If there's an error, handle it by throwing up a bootstrap alert
