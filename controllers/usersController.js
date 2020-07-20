@@ -25,7 +25,7 @@ router.post("/", (req, res) => {
   //     message: "Unable to create new user.",
   //   });
   // });
-});
+//});
 
 router.put("/:id", (req, res) => {
   res.json({

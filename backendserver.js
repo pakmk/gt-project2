@@ -14,7 +14,7 @@ const ViewsController = require("./controllers/viewsController.js");
 const PORT = process.env.PORT || 8080;
 const app = express();
 const db = require("./models");
-const ViewsController = require("./controllers/viewsController.js");
+// const ViewsController = require("./controllers/viewsController.js");
 const APIController = require("./controllers/apiController");
 const usersController = require("./controllers/usersController");
 
