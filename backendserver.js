@@ -6,6 +6,10 @@ var session = require("express-session");
 var passport = require("./config/passport");
 var bcryptjs = require("bcryptjs");
 
+// const ViewsController = require("./controllers/viewsController.js");
+// const APIController = require("./controllers/apiController");
+// const UsersController = require("./controllers/usersController")
+
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
@@ -29,13 +33,13 @@ app.use(passport.session());
 // Requiring our routes
 // require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
-const ViewsController = require("./controllers/viewsController.js");
-const APIController = require("./controllers/apiController");
-const UsersController = require("./controllers/usersController");
-// Routes
-app.use(ViewsController);
-app.use(APIController);
-app.use("/api/users", UsersController);
+
+// app.use(ViewsController);
+// app.use(APIController);
+// app.use("/api/users", UsersController);
+
+var router = require("./controllers/apiController.js");
+app.use(router);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function () {
