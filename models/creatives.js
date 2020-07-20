@@ -1,7 +1,7 @@
 // Creating our Creative model 
 
 module.exports = function(sequelize, DataTypes) {
-  var Creatives = sequelize.define("Creative", {
+  const Creatives = sequelize.define("Creative", {
     // The email cannot be null, and must be a proper email before creation
     id: {
         type: DataTypes.INTEGER,
@@ -26,5 +26,6 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
       },
   });
+
   return Creatives;
 };
