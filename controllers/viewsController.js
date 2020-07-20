@@ -25,7 +25,5 @@ router.get("/artist-post", (req, res) => {
   res.render("artist-post");
 });
 
-router.get("/trending", (req, res) => {
-  res.render("trending");
-});
+
 module.exports = router;
