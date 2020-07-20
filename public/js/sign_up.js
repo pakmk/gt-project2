@@ -20,6 +20,18 @@ $(document).ready(function() {
       emailInput.val("");
       passwordInput.val("");
     });
+    $.ajax("/api/signup" + id, {
+        type: "POST",
+        data: userData
+      }).then(
+        function() {
+          console.log("EMAIL AND PASSWORD", userData);
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    });
+  
   
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors
@@ -35,9 +47,9 @@ $(document).ready(function() {
         .catch(handleLoginErr);
     }
   
-    function handleLoginErr(err) {
-      $("#alert .msg").text(err.responseJSON);
-      $("#alert").fadeIn(500);
-    }
-  });
+//     function handleLoginErr(err) {
+//       $("#alert .msg").text(err.responseJSON);
+//       $("#alert").fadeIn(500);
+//     }
+//   });
   

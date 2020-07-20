@@ -23,18 +23,16 @@ $(document).ready(function() {
     });
   
     // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
-    function loginUser(email, password) {
-      $.post("/api/login", {
-        email: email,
-        password: password
-      })
-        .then(function() {
-          window.location.replace("/members");
-          // If there's an error, log the error
-        })
-        .catch(function(err) {
-          console.log(err);
-        });
-    }
-  });
+    $.ajax("/api/login" + id, {
+        type: "POST",
+        data: userData
+      }).then(
+        function() {
+          console.log("EMAIL AND PASSWORD", userData);
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    });
+  
   
