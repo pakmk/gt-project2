@@ -7,6 +7,7 @@ $(document).ready(function() {
     // When the signup button is clicked, we validate the email and password are not blank
     signUpForm.on("submit", function(event) {
       event.preventDefault();
+      console.log("you clicked")
       var userData = {
         email: emailInput.val().trim(),
         password: passwordInput.val().trim()
@@ -20,36 +21,38 @@ $(document).ready(function() {
       emailInput.val("");
       passwordInput.val("");
 
-      $.ajax("/api/signup" + id, {
-        type: "POST",
-        data: userData
-      }).then(
-        function() {
-          console.log("EMAIL AND PASSWORD", userData);
-          // Reload the page to get the updated list
-          location.reload();
-        }
-      );
+      // $.ajax("/api/signup", {
+      //   type: "POST",
+      //   data: userData
+      // }).then(
+      //   function(userData) {
+      //     console.log("EMAIL AND PASSWORD", userData);
+      //     // Reload the page to get the updated list
+      //     // location.reload();
+      //   }
+      // );
     });
   
-    // // Does a post to the signup route. If successful, we are redirected to the members page
-    // // Otherwise we log any errors
-    // function signUpUser(email, password) {
-    //   $.post("/api/signup", {
-    //     email: email,
-    //     password: password
-    //   })
-    //     .then(function(data) {
-    //       window.location.replace("/members");
-    //       // If there's an error, handle it by throwing up a bootstrap alert
-    //     })
-    //     .catch(handleLoginErr);
-    // }
+    // Does a post to the signup route. If successful, we are redirected to the members page
+    // Otherwise we log any errors
+    function signUpUser(email, password) {
+      $.post("/api/signup", {
+        email: email,
+        password: password
+      })
+        .then(function(data) {
+          console.log(data)
+          res.redirect("/")
+          // window.location.replace("/members");
+          // If there's an error, handle it by throwing up a bootstrap alert
+        })
+        .catch(handleLoginErr);
+    }
   
-    // function handleLoginErr(err) {
-    //   $("#alert .msg").text(err.responseJSON);
-    //   $("#alert").fadeIn(500);
-    // }
+    function handleLoginErr(err) {
+      $("#alert .msg").text(err.responseJSON);
+      $("#alert").fadeIn(500);
+    }
     
   
   });

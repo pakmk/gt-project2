@@ -6,7 +6,7 @@ var session = require("express-session");
 var passport = require("./config/passport");
 var bcryptjs = require("bcryptjs");
 
-// const ViewsController = require("./controllers/viewsController.js");
+const ViewsController = require("./controllers/viewsController.js");
 // const APIController = require("./controllers/apiController");
 // const UsersController = require("./controllers/usersController")
 
@@ -23,23 +23,24 @@ app.use(express.static("public"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+var router = require("./controllers/apiController.js");
+// console.log(router);
+app.use(router);
+
 // We need to use sessions to keep track of our user's login status
-app.use(
-  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-);
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(
+//   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+// );
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // Requiring our routes
 // require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
 
-// app.use(ViewsController);
+app.use(ViewsController);
 // app.use(APIController);
 // app.use("/api/users", UsersController);
-
-var router = require("./controllers/apiController.js");
-app.use(router);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function () {
