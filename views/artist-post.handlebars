@@ -38,21 +38,17 @@
             <img src="https://via.placeholder.com/150x150" class="profileImage-cover">
         </div>
         <div class="profileName">
-            <h3>Name</h3>
+            <h3>"Name"</h3>
         </div>
     </header>
-    <div class="form">
-        <!-- Default input -->
-        <div class="form-group">
-            <label for="formGroupExampleInput">Example label</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-        </div>
-        <!-- Default input -->
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Another label</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-        </div>
-    </div>
+    <form class="post" id="post">
+        <label for="title">Title</label>
+        <input type="text" id="title" class="form-control">
+        <br>
+        <label for="comment">Comments</label>
+        <textarea class="form-control rounded-0" id="comment" rows="10"></textarea>
+        <button class="btn btn-info btn-block my-4" type="submit">Submit</button>
+    </form>
     <footer>
         {{!-- <p>Footer</p> --}}
     </footer>

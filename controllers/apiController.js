@@ -41,6 +41,22 @@ var passport = require("../config/passport");
       });
   });
 
+  router.post("/api/posts", function(req, res) {
+    console.log(req.body);
+    db.Post.create({
+      title: req.body.title,
+      body: req.body.body
+    })
+      .then(function(dbUser) {
+        // res.redirect(307, "/api/login");
+        res.json(dbUser)
+      })
+      .catch(function(err) {
+        // res.status(401).json(err);
+        res.json(err)
+      });
+  });
+
   // Route for logging user out
   router.get("/logout", function(req, res) {
     req.logout();
