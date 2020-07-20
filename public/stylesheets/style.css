@@ -10,7 +10,7 @@
 }
 
 .navbar {
-  background-color: rebeccapurple;
+  color: rebeccapurple;
 }
   .main {
     border-radius: 0px;
@@ -22,5 +22,5 @@
   }
 
   body{
-    /* background-image: url(../Assets/green-2721758_1280.png); */
+    background-image: url(../Assets/background-1845299_960_720.jpg);
   }
