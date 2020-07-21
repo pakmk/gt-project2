@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "Mwd768!!!",
+=======
+    "password": "blue14",
+>>>>>>> 9541fdd168ec08cee3a3990f65fa12c6591043ce
     "database": "creativeMeet_db",
     "host": "127.0.0.1",
     "port": 3306,
