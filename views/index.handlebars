@@ -20,9 +20,9 @@
       <li class="nav-item">
         <a class="nav-link" href="/artist-dash">My Profile</a>
       </li>
-      <li class="nav-item">
+      {{!-- <li class="nav-item">
         <a class="nav-link" href="/artist-post">Make a Post</a>
-      </li>
+      </li> --}}
       <li class="nav-item">
         <a class="nav-link" href="/signup">Sign Up</a>
       </li>
@@ -38,8 +38,9 @@
   <!-- Collapsible content -->
 
 </nav>
+<br><br><br>
 <!--/.Navbar-->
-< <div class="container">
+{{!-- <div class="container">
   <h1 class="fromtop">Search for Artists<i class="fa fa-music" aria-hidden="true"></i> <i class="fa fa-paint-brush"
       aria-hidden="true"></i> <i class="fa fa-camera" aria-hidden="true"></i> <i class="fa fa-film"
       aria-hidden="true"></i></h1>
@@ -55,47 +56,61 @@
         <button class="btn waves-effect waves-light btn peach-gradient" type="submit" name="action">Search
           <i class="material-icons right"></i>
         </button>
-    </div>
-    </form>
-  </div>
-  </div>
-  </div>
-  <div class="container cash deep-orange lighten-2">
-    <div class="row-just-content-md-center">
-      <div class=col-md-12>
-        <h2 class="works">Work of the Day:</h2>
-        <hr />
-      </div>
-      <div class="col-md-12 banks">
-        
-        
-      </div>
-      <div>
+        </form>
+    </div> --}}
 
-      </div>
+</div>
+<div class="container cash deep-orange lighten-2">
+  <div class="row-just-content-md-center">
+    <br>
+    {{!-- <div class=col-md-12>
+      <h2 class="works">Work of the Day:</h2>
+      <hr />
     </div>
-    <div class="row-just-content-md-center">
-      <div class=col-md-12>
-        <h2 class="works">Additional Work You May Enjoy!</h2>
+    <div class="col-md-12 banks">
+
+
+    </div>
+    <div>
+
+    </div> --}}
+  </div>
+  <div class="row-just-content-md-center">
+    {{!-- <div class=col-md-12>
+        <h2 class="works">Works You Might Enjoy!</h2>
         <hr>
-      </div>
-      <div class="col-md-12 banks">
-        <h3 id="featured-artists">Featured Artists</h3>
-        {{#each artists}}
-        <ul>
-          <li>
-            <p id="artist-name">ID: {{this.dataValues.id}}</p>
-            <p id="artist-name">Name: {{this.dataValues.name}}</p>
-             <p id="artist-name">Title: {{this.dataValues.bio}}</p>
-             <p id="artist-name">Works Link: {{this.dataValues.works}}</p>
-          </li>
-        </ul>
-        {{/each}}
-      </div>
+      </div> --}}
+    <div class="col-md-12 banks">
+      <h3 id="featured-artists">Artists You Might Enjoy!</h3>
+      {{#each artists}}
+      <ul>
+        <li>
+          {{!-- <p id="artist-name">ID: {{this.dataValues.id}}</p> --}}
+          <p id="artist-name">Name: {{this.dataValues.name}}</p>
+          <p id="artist-name">Title: {{this.dataValues.bio}}</p>
+          <p id="artist-name">Works: <a href='{{this.dataValues.works}}'>{{this.dataValues.works}}</a></p>
+        </li>
+      </ul>
+      {{/each}}
+    </div>
+
+    <div class="col-md-12 banks">
+      <h3 id="featured-artists">Artists Comments</h3>
+     {{#each blog}}
+      <ul>
+        <li>
+          {{!-- <p id="artist-name">ID: {{this.dataValues.id}}</p> --}}
+          <p id="artist-name">Title: {{this.dataValues.title}}</p>
+          <p id="artist-name">Comments: {{this.dataValues.body}}</p>
+        </li>
+      </ul>
+      {{/each}}
     </div>
   </div>
-  </div>
-  <div>
-    {{log artists}}
+</div>
+</div>
+<div>
+  {{!-- {{log artists}} --}}
+  {{!-- {{log blog}} --}}
 
-  </div>
+</div>
