@@ -44,7 +44,7 @@ h2 {
 }
 
 .shift {
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .main {
@@ -54,7 +54,7 @@ h2 {
 #search {
   background-color: peachpuff;
   border-radius: 25px;
-  justify-content: 100%;
+  margin-right: 200px;
 }
 
 .round {
@@ -66,7 +66,7 @@ h2 {
 }
 
 body{
-  background-image: url(../Assets/paintaf.png);
+  background-image: url(../Assets/trial.jpg);
   background-position: center top;
   background-size: 100% auto;
   background-repeat: no-repeat;
