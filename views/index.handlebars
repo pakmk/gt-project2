@@ -30,8 +30,7 @@
         <a class="nav-link" href="/login">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/logout">Logout</a
-      </li>
+        <a class="nav-link" href="/logout">Logout</a </li>
     </ul>
     <!-- Links -->
 
@@ -40,49 +39,59 @@
 
 </nav>
 <!--/.Navbar-->
-<
-
-
-<div class="container">
+< <div class="container">
   <h1 class="fromtop">Search for Artists<i class="fa fa-music" aria-hidden="true"></i> <i class="fa fa-paint-brush"
       aria-hidden="true"></i> <i class="fa fa-camera" aria-hidden="true"></i> <i class="fa fa-film"
       aria-hidden="true"></i></h1>
-</div>
-<br>
-<div class="container shift">
+  </div>
+  <br>
+  <div class="container shift">
     <div class="nav-wrapper row">
       <form>
-        <div class="input-field">  
-        <input type="search" id="search" class="form-control mb-4"> 
-            <label class="label-icon" for="search">
-              <i class="material-icons"></i></label> <i class="material-icons"></i> </div>
-          <button class="btn waves-effect waves-light btn peach-gradient" type="submit" name="action">Search
-            <i class="material-icons right"></i>
-          </button>
-        </div>
-      </form>
+        <div class="input-field">
+          <input type="search" id="search" class="form-control mb-4">
+          <label class="label-icon" for="search">
+            <i class="material-icons"></i></label> <i class="material-icons"></i> </div>
+        <button class="btn waves-effect waves-light btn peach-gradient" type="submit" name="action">Search
+          <i class="material-icons right"></i>
+        </button>
     </div>
+    </form>
   </div>
-</div>
-<div class="container cash deep-orange lighten-2">
-  <div class="row-just-content-md-center">
-    <div class=col-md-12>
-      <h2 class="works">Work of the Day:</h2>
-      <hr />
+  </div>
+  </div>
+  <div class="container cash deep-orange lighten-2">
+    <div class="row-just-content-md-center">
+      <div class=col-md-12>
+        <h2 class="works">Work of the Day:</h2>
+        <hr />
+      </div>
+      <div class="col-md-12 banks">
+        <img src="" alt="artist's work" class="picture" align=left>
+        {{#each artists}}
+        <ul>
+          <li>
+            <p>Name: {{this.dataValues.name}}</p>
+          </li>
+        </ul>
+        {{/each}}
+      </div>
+      <div>
+
+      </div>
     </div>
-    <div class="col-md-12 banks">
-      <img src="" alt="artist's work" class="picture" align=left>
+    <div class="row-just-content-md-center">
+      <div class=col-md-12>
+        <h2 class="works">Additional Work You May Enjoy!</h2>
+        <hr>
+      </div>
+      <div class="col-md-12 banks"> <img src="" alt="artist's work" class="picture" align=left>
         <p>Works go Here</p>
+      </div>
     </div>
   </div>
-  <div class="row-just-content-md-center">
-    <div class=col-md-12>
-      <h2 class="works">Additional Work You May Enjoy!</h2>
-      <hr>
-    </div>
-    <div class="col-md-12 banks"> <img src="" alt="artist's work" class="picture" align=left>
-      <p>Works go Here</p>
-    </div>
   </div>
-</div>
-</div>
+  <div>
+    {{log artists}}
+
+  </div>
