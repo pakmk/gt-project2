@@ -44,7 +44,7 @@ var passport = require("../config/passport");
 
   router.post("/api/artist-dash", function(req, res) {
     console.log(req.body);
-    db.ArtistsDash.create({
+    db.Artists.create({
       id: req.body.id,
       name: req.body.name,
       bio: req.body.bio
