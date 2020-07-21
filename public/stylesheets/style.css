@@ -71,3 +71,11 @@ body{
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
+
+#artist-name  {
+  text-align:left;
+}
+
+#featured-artists {
+  font-weight:bold;
+}
