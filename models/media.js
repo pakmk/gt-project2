@@ -1,11 +1,5 @@
-// Creating our Media model
-
 module.exports = function (sequelize, DataTypes) {
   var Media = sequelize.define("Media", {
-    artist: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,

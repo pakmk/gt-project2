@@ -17,18 +17,18 @@
       <li class="nav-item active">
         <a class="nav-link text-white" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="/signup">Sign Up</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="/artist-dash">My Profile</a>
-      </li>
+      {{!-- <li class="nav-item">
+        <a class="nav-link" href="/signup">Sign Up</a>
+      </li> --}}
+      {{!-- <li class="nav-item">
+        <a class="nav-link" href="/artist-dash">My Profile</a>
+      </li> --}}
       <li class="nav-item">
         <a class="nav-link text-white" href="/artist-post">Make a Post</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="/login">Login</a>
-      </li>
+      {{!-- <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li> --}}
       <li class="nav-item">
         <a class="nav-link text-white" href="/logout">Logout</a>
       </li>
@@ -47,30 +47,27 @@
     <form class="create-name" id="createName">
       <div class="form-group">
         <div class="input-group mb-3">
-          <input type="text" id="name-input" name="name" class="form-control" placeholder="Name" aria-label="Name"
+          <input type="text" id="name-input" name="name" class="form-control" placeholder="Insert Your Name Here" aria-label="Name"
             aria-describedby="button-addon2">
           <div class="input-group-append">
           </div>
         </div>
-        <h2>Bio</h2>
-        <input type="text" id="bio-input" name="bio" class="form-control" placeholder="Name" aria-label="Name"
+        <h2>Title</h2>
+        <input type="text" id="bio-input" name="bio" class="form-control" placeholder="Insert Your Work's Title Here" aria-label="Name"
+          aria-describedby="button-addon2">
+          <h2>Link to Your Work</h2>
+          <input type="text" id="works-input" name="works" class="form-control" placeholder="Copy and Paste Link Here" aria-label="works"
           aria-describedby="button-addon2">
         <div class="input-group-append">
+          <button class="btn btn-info btn-block my-4" id="name-btn1">Submit</button>
         </div>
       </div>
-    <h2>Works</h2>
-      <div class="file-field input-field">
-        </div>
-        <div class="file-path-wrapper">
-          <input class="file-path validate" type="text">
-        </div>
-        <div>
-          <button class="btn waves-effect waves-light btn peach-gradient" type="submit" name="action">Submit
-          <i class="material-icons right"></i>
-        </button>
-        </div>
+      <div> 
+        <a href="/artist-post">Make a Blog Post!</a>
       </div>
     </form>
+
+    
     </section>
     <footer>
       {{!-- <p>Footer</p> --}}

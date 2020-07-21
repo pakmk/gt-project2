@@ -29,6 +29,7 @@ router.post("/api/signup", function (req, res) {
     .then(function (dbUser) {
       // res.redirect(307, "/api/login");
       res.json(dbUser);
+      alert("You Have Signed Up!");
     })
     .catch(function (err) {
       // res.status(401).json(err);
@@ -42,6 +43,7 @@ router.post("/api/artist-dash", function (req, res) {
     id: req.body.id,
     name: req.body.name,
     bio: req.body.bio,
+    works: req.body.works
   })
     .then(function (dbUser) {
       // res.redirect(307, "/api/login");
@@ -56,7 +58,7 @@ router.post("/api/artist-dash", function (req, res) {
 //Artist posts
 router.post("/api/posts", function (req, res) {
   console.log(req.body);
-  db.Post.create({
+  db.Blog.create({
     title: req.body.title,
     body: req.body.body,
   })
@@ -74,6 +76,7 @@ router.post("/api/posts", function (req, res) {
 router.get("/logout", function (req, res) {
   req.logout();
   res.redirect("/login");
+  alert("You Have Logged Out!");
 });
 
 // Route for getting some data about our user to be used client side

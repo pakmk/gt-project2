@@ -1,12 +1,5 @@
-// Creating our Post model
 module.exports = function (sequelize, DataTypes) {
-  var Post = sequelize.define("Post", {
-    // The email cannot be null, and must be a proper email before creation
-    // id: {
-    //   type: DataTypes.INTEGER,
-    //   primaryKey: true,
-    //   autoIncrement: true,
-    // },
+  var Blog = sequelize.define("Blog", {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -16,5 +9,5 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     },
   });
-  return Post;
+  return Blog;
 };
