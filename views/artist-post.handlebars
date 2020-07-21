@@ -17,14 +17,15 @@
                 <li class="nav-item">
         <a class="nav-link" href="/artist-dash">My Profile</a>
       </li>
-      <li class="nav-item">
+      {{!-- <li class="nav-item">
         <a class="nav-link" href="/artist-post">Make a Post</a>
-      </li>
+      </li> --}}
+      {{!-- <li>
                 <a class="nav-link" href="/signup">Sign Up</a>
-            </li>
-            <li class="nav-item">
+            </li> --}}
+            {{!-- <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
-            </li>
+            </li> --}}
             <li class="nav-item">
         <a class="nav-link" href="/logout">Logout</a>
       </li>
@@ -34,20 +35,20 @@
     <!-- Collapsible content -->
 </nav>
 <!--/.Navbar-->
-<div class="container">
-    <header>
+<div class="container fromtop">
+    {{!-- <header>
         <div>
             <img src="https://via.placeholder.com/150x150" class="profileImage-cover">
         </div>
         <div class="profileName">
             <h3>"Name"</h3>
         </div>
-    </header>
+    </header> --}}
     <form class="post" id="post">
         <label for="title">Title</label>
         <input type="text" id="title" class="form-control">
         <br>
-        <label for="comment">Comments</label>
+        <label for="comment">Write something here!</label>
         <textarea class="form-control rounded-0" id="comment" rows="10"></textarea>
         <button class="btn btn-info btn-block my-4" type="submit">Submit</button>
     </form>

@@ -58,7 +58,7 @@ router.post("/api/artist-dash", function (req, res) {
 //Artist posts
 router.post("/api/posts", function (req, res) {
   console.log(req.body);
-  db.Post.create({
+  db.Blog.create({
     title: req.body.title,
     body: req.body.body,
   })
