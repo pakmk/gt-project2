@@ -5,7 +5,7 @@ const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 const bcryptjs = require("bcryptjs");
-const {
+// const {
 //   allowInsecurePrototypeAccess,
 // } = require("@handlebars/allow-prototype-access");
 const handlebars = require("handlebars");

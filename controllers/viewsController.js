@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-var connection = require("../config/config.json");
-var sequelize = require("sequelize");
+// var connection = require("../config/config.json");
+// var sequelize = require("sequelize");
 const db = require("../models");
 
 router.get("/", (req, res) => {
@@ -11,16 +11,15 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/", (req, res) => {
-  db.Media.findAll({}).then(function (dbMedia) {
-    res.render("index", {media: dbMedia});
-  });
-});
+// router.get("/", (req, res) => {
+//   db.Media.findAll({}).then(function (dbMedia) {
+//     res.render("index", {media: dbMedia});
+//   });
+// });
 
 router.get("/", (req, res) => {
-  db.Post.findAll({}).then(function (dbPost) {
-    
-    res.render("index", {post: dbPost});
+  db.Blog.findAll({}).then(function (dbBlog) {
+    res.render("index", {blog: dbBlog});
   });
 });
 
