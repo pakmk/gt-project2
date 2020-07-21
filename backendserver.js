@@ -1,21 +1,24 @@
 // Requiring necessary npm packages
-var express = require("express");
+const express = require("express");
 const exphbs = require("express-handlebars");
-var session = require("express-session");
+const session = require("express-session");
 // Requiring passport as we've configured it
-var passport = require("./config/passport");
-var bcryptjs = require("bcryptjs");
+const passport = require("./config/passport");
+const bcryptjs = require("bcryptjs");
 
 const ViewsController = require("./controllers/viewsController.js");
 // const APIController = require("./controllers/apiController");
 // const UsersController = require("./controllers/usersController")
 
 // Setting up port and requiring models for syncing
-var PORT = process.env.PORT || 8080;
-var db = require("./models");
+const PORT = process.env.PORT || 8080;
+const app = express();
+const db = require("./models");
+// const ViewsController = require("./controllers/viewsController.js");
+const APIController = require("./controllers/apiController");
+const usersController = require("./controllers/usersController");
 
 // Creating express app and configuring middleware needed for authentication
-var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
@@ -51,4 +54,8 @@ db.sequelize.sync({ force: true }).then(function () {
       PORT
     );
   });
+})
+.catch((err) => {
+  console.log("Error connecting to the database.");
+  console.log(err);
 });

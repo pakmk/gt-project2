@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const isAuthenticated=require("../config/middleware/isAuthenticated")
+
 router.get("/", (req, res) => {
   res.render("index");
 });
