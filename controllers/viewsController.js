@@ -11,6 +11,18 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/", (req, res) => {
+  db.Media.findAll({}).then(function (dbMedia) {
+    res.render("index", {media: dbMedia});
+  });
+});
+
+router.get("/", (req, res) => {
+  db.Post.findAll({}).then(function (dbPost) {
+    res.render("index", {post: dbPost});
+  });
+});
+
 router.get("/index", (req, res) => {
   res.render("index");
 });

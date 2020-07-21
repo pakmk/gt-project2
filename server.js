@@ -5,7 +5,10 @@ const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 const bcryptjs = require("bcryptjs");
-
+const {
+  allowInsecurePrototypeAccess,
+} = require("@handlebars/allow-prototype-access");
+const handlebars = require("handlebars");
 const ViewsController = require("./controllers/viewsController.js");
 // const APIController = require("./controllers/apiController");
 // const UsersController = require("./controllers/usersController")
@@ -23,7 +26,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 // Handlebars setup
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    handlebars: allowInsecurePrototypeAccess(handlebars),
+  })
+);
 app.set("view engine", "handlebars");
 
 var router = require("./controllers/apiController.js");

@@ -67,15 +67,8 @@
         <hr />
       </div>
       <div class="col-md-12 banks">
-        <img src="" alt="artist's work" class="picture" align=left>
         
-        {{#each artists}}
-        <ul>
-          <li>
-            <p>Name: {{this.dataValues.name}}</p>
-          </li>
-        </ul>
-        {{/each}}
+        
       </div>
       <div>
 
@@ -86,8 +79,18 @@
         <h2 class="works">Additional Work You May Enjoy!</h2>
         <hr>
       </div>
-      <div class="col-md-12 banks"> <img src="" alt="artist's work" class="picture" align=left>
-        <p>Works go Here</p>
+      <div class="col-md-12 banks">
+        <h3 id="featured-artists">Featured Artists</h3>
+        {{#each artists}}
+        <ul>
+          <li>
+            <p id="artist-name">ID: {{this.dataValues.id}}</p>
+            <p id="artist-name">Name: {{this.dataValues.name}}</p>
+             <p id="artist-name">Title: {{this.dataValues.bio}}</p>
+             <p id="artist-name">Works Link: {{this.dataValues.works}}</p>
+          </li>
+        </ul>
+        {{/each}}
       </div>
     </div>
   </div>
