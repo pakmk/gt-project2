@@ -1,7 +1,7 @@
 // Creating our Creative model 
 
 module.exports = function(sequelize, DataTypes) {
-  var ArtistsDash = sequelize.define("ArtistsDash", {
+  var Artists = sequelize.define("Artists", {
     // The email cannot be null, and must be a proper email before creation
     // id: {
     //     type: DataTypes.INTEGER,
@@ -17,14 +17,14 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      post_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      works_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
+      // post_id: {
+      //   type: DataTypes.INTEGER,
+      //   allowNull: false,
+      // },
+      // works_id: {
+      //   type: DataTypes.INTEGER,
+      //   allowNull: false,
+      // },
   });
-  return ArtistsDash;
+  return Artists;
 };
