@@ -43,6 +43,17 @@ router.get("/artist-dash", isAuthenticated, function(req, res) {
   res.render("/artist-dash")
 });
 
-
+router.get("/", function (req, res) {
+  db.Artists.findAll({}).then(function(response){
+    console.log(response);
+  }).catch((err) => {
+    console.log(err);
+    res.status(500).json({
+      error: true,
+      data: null,
+      message: "error",
+    });
+  });
+});
 
 module.exports = router;

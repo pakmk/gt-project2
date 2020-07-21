@@ -2,12 +2,6 @@
 
 module.exports = function(sequelize, DataTypes) {
   var Artists = sequelize.define("Artists", {
-    // The email cannot be null, and must be a proper email before creation
-    // id: {
-    //     type: DataTypes.INTEGER,
-    //     primaryKey: true,
-    //     autoIncrement: true,
-    //   },
       name: {
         type: DataTypes.STRING,
         allowNull: false,
