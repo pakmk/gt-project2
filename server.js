@@ -6,8 +6,8 @@ const session = require("express-session");
 const passport = require("./config/passport");
 const bcryptjs = require("bcryptjs");
 const {
-  allowInsecurePrototypeAccess,
-} = require("@handlebars/allow-prototype-access");
+//   allowInsecurePrototypeAccess,
+// } = require("@handlebars/allow-prototype-access");
 const handlebars = require("handlebars");
 const ViewsController = require("./controllers/viewsController.js");
 // const APIController = require("./controllers/apiController");
@@ -30,7 +30,7 @@ app.engine(
   "handlebars",
   exphbs({
     defaultLayout: "main",
-    handlebars: allowInsecurePrototypeAccess(handlebars),
+    // handlebars: allowInsecurePrototypeAccess(handlebars),
   })
 );
 app.set("view engine", "handlebars");

@@ -19,6 +19,7 @@ router.get("/", (req, res) => {
 
 router.get("/", (req, res) => {
   db.Post.findAll({}).then(function (dbPost) {
+    
     res.render("index", {post: dbPost});
   });
 });
