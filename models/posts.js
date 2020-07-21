@@ -3,13 +3,13 @@
 module.exports = function (sequelize, DataTypes) {
   var Posts = sequelize.define("Post", {
     // The email cannot be null, and must be a proper email before creation
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-    },
+    // id: {
+    //   type: DataTypes.INTEGER,
+    //   primaryKey: true,
+    //   autoIncrement: true,
+    // },
     title: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     //   type moved to media table
