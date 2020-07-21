@@ -14,31 +14,27 @@ $(document).ready(function() {
         bio: bioButton.val().trim()
       };
     console.log(userData);
-    var name = userData.name;
-    var bio = userData.bio;
-    console.log(name);
-    console.log(bio);
-    postName(name,bio);
+    postName();
       // if (!userData.name || !userData.bio) {
       //   return;
       // }
-    return userData;
+      // return userData;
       // If we have an email and password, run the signUpUser function
       
       // postName(userData.name, userData.bio);
       // nameInput.val("");
       // bioInput.val("");
     });
-  
+
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors
-    function postName(name,bio) {
+    function postName(name, bio) {
       $.post("/api/artist-dash", {
         name: name,
         bio: bio
       })
-        .then(function(name,bio) {
-          console.log(name,bio)
+        .then(function(data) {
+          console.log({data)
         //   res.redirect("/")
           // window.location.replace("/");
           // If there's an error, handle it by throwing up a bootstrap alert
@@ -47,7 +43,7 @@ $(document).ready(function() {
     }
   
     function handleLoginErr(err) {
-      $("#alert.msg").text(err.responseJSON);
+      $("#alert .msg").text(err.responseJSON);
       $("#alert").fadeIn(500);
     }
     
