@@ -37,8 +37,8 @@ $(document).ready(function() {
         name: name,
         bio: bio
       })
-        .then(function(name,bio) {
-          console.log(name,bio)
+        .then(function(data) {
+          console.log(data)
         //   res.redirect("/")
           // window.location.replace("/");
           // If there's an error, handle it by throwing up a bootstrap alert
