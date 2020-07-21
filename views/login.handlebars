@@ -1,13 +1,14 @@
 <!--Navbar-->
-<nav class="navbar navbar-light secondary-color-dark navbar-1 ">
+<!--Navbar-->
+<nav class="navbar navbar-light navbar-1 white">
 
   <!-- Navbar brand -->
-  <a class="navbar-brand text-white" href="/">Creative Meet</a>
+  <a class="navbar-brand" href="/">Creative Meet</a>
 
   <!-- Collapse button -->
-  <button class="navbar-toggler btn peach-gradient" type="button" data-toggle="collapse"
-    data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false"
-    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+    aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span
+      class="navbar-toggler-icon"></span></button>
 
   <!-- Collapsible content -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent15">
@@ -15,7 +16,13 @@
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/artist-dash">My Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/artist-post">Make a Post</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/signup">Sign Up</a>
@@ -24,10 +31,9 @@
         <a class="nav-link" href="/login">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/artist-dash">My Profile</a>
-      </li>  
-      <li class="nav-item">
-        <a class="nav-link" href="/logout">Logout</a>   
+        <a class="nav-link" href="/logout">Logout</a>
+        
+      </li>
     </ul>
     <!-- Links -->
 
@@ -36,48 +42,26 @@
 
 </nav>
 <!--/.Navbar-->
-<
 
+<!-- Default form login -->
 <div class="container">
-  <h1 class="fromtop">Search for Artists<i class="fa fa-music" aria-hidden="true"></i> <i class="fa fa-paint-brush"
-      aria-hidden="true"></i> <i class="fa fa-camera" aria-hidden="true"></i> <i class="fa fa-film"
-      aria-hidden="true"></i></h1>
+  <form class="text-center border border-light p-5" id= "login" action="#!">
+
+    <p class="h4 mb-4">Login</p>
+
+    <!-- Email -->
+    <input type="email" id="loginEmail" class="form-control mb-4" placeholder="Email">
+
+    <!-- Password -->
+    <input type="password" id="loginPassword" class="form-control mb-4" placeholder="Password">
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+
+    <!-- Register -->
+    <p>
+      <a href="/signup">Sign Up</a>
+    </p>
+  </form>
 </div>
-<br>
-<div class="container shift">
-    <div class="nav-wrapper row">
-      <form>
-        <div class="input-field">  
-        <input type="search" id="search" class="form-control mb-4"> 
-            <label class="label-icon" for="search">
-              <i class="material-icons"></i></label> <i class="material-icons"></i> </div>
-          <button class="btn waves-effect waves-light btn peach-gradient" type="submit" name="action">Search
-            <i class="material-icons right"></i>
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-<div class="container cash deep-orange lighten-2">
-  <div class="row-just-content-md-center">
-    <div class=col-md-12>
-      <h2 class="works">Work of the Day:</h2>
-      <hr />
-    </div>
-    <div class="col-md-12 banks">
-      <img src="" alt="artist's work" class="picture" align=left>
-        <p>Works go Here</p>
-    </div>
-  </div>
-  <div class="row-just-content-md-center">
-    <div class=col-md-12>
-      <h2 class="works">Additional Work You May Enjoy!</h2>
-      <hr>
-    </div>
-    <div class="col-md-12 banks"> <img src="" alt="artist's work" class="picture" align=left>
-      <p>Works go Here</p>
-    </div>
-  </div>
-</div>
-</div>
+<!-- Default form login -->
