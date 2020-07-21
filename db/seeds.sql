@@ -1,0 +1,5 @@
+("Matthew A. Cherry (@matthewacherry)", "Hair Love | Oscar®-Winning Short Film", "Film", "12/5/2019", "This tells a story of a father learning to do his daughter’s hair for the first time.", "https://www.youtube.com/watch?v=kNw8V_Fkw28"), 
+("Boubou Dakar (@bouboudesign)", "Art is my life", "Visual Arts", "10/14/2019", "Bou bou paints a portrait of a friend with their hair", "https://www.youtube.com/watch?v=dcSfZaY-DKY"),
+("Aaron Spears (@aspears)", "Zildjian LIVE! - Aaron Spears", "Music", "10/4/2019", "Featured guest drummer on this song called, Shufflin Off written by Robert Sput Searight.", "https://www.youtube.com/watch?v=XFIYIySQK7M"),
+("MaKenzie Thomas (@itsmakenziet)", "MaKenzie Thomas Performs Emotion", "Vocal", "11/26/2018", "MaKeznie performing on the show, The Voice, covering this classic hit by Destiny Child", "https://www.youtube.com/watch?v=wrdCoQ7aa3A"),
+("Esosa & Susan (@sosa__.__ & @_nigerianjawn)", "Two African Dancers", "Dancing", "4/4/2019", "Two African dancers who have become infamous through social media dancing to Gbesi Gbeko by Toofan.", "https://www.youtube.com/watch?v=VW7YCeeoOOs"), 
