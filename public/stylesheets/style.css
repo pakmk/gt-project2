@@ -57,6 +57,14 @@ h2 {
   justify-content: 100%;
 }
 
+.round {
+  border-radius: 25px;
+}
+
+.loginColor {
+  color: white;
+}
+
 body{
   background-image: url(../Assets/paintaf.png);
   background-position: center top;
