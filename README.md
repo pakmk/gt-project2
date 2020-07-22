@@ -25,9 +25,9 @@ https://github.com/pakmk/gt-project2
 Resources such as iTerm and Visual Source Code will also be need to run the code.
 
   ## Usage
-[Heroku Link for Deployed Application](https://creative-meet-project.herokuapp.com/)
+[Heroku Link for Deployed Application]()
   
- ![example](./public/Assets/chrome-capture.jpg)
+ ![example](./public/Assets/webpage.jpg)
 
   
 
