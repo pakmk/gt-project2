@@ -59,43 +59,23 @@
         </form>
     </div> --}}
 
-</div>
 <div class="container cash deep-orange lighten-2">
   <div class="row-just-content-md-center">
     <br>
-    {{!-- <div class=col-md-12>
-      <h2 class="works">Work of the Day:</h2>
-      <hr />
-    </div>
     <div class="col-md-12 banks">
-
-
-    </div>
-    <div>
-
-    </div> --}}
-  </div>
-  <div class="row-just-content-md-center">
-    {{!-- <div class=col-md-12>
-        <h2 class="works">Works You Might Enjoy!</h2>
-        <hr>
-      </div> --}}
-    <div class="col-md-12 banks">
-      <h3 id="featured-artists">Artists You Might Enjoy!</h3>
-      {{#each artists}}
-      {{!-- {{log dataValues}} --}}
+      <h3 id="featured-artists">Artists Comments</h3>
+     {{#each blog}}
+     {{!-- {{log dataValues}} --}}
       <ul>
         <li>
           {{!-- <p id="artist-name">ID: {{this.dataValues.id}}</p> --}}
-          <p id="artist-name">Name: {{this.dataValues.name}}</p>
-          <p id="artist-name">Title: {{this.dataValues.bio}}</p>
-          <p id="artist-name">Works: <a href='{{this.dataValues.works}}'>{{this.dataValues.works}}</a></p>
+          <p id="artist-name">Artist: {{this.dataValues.title}}</p>
+          <p id="artist-name">Comments: {{this.dataValues.body}}</p>
         </li>
       </ul>
       {{/each}}
     </div>
-    <br>
-  {{!-- {{log artists}} --}}
-
-
+  </div>
+  <br>
 </div>
+

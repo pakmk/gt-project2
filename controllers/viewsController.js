@@ -17,9 +17,9 @@ router.get("/", (req, res) => {
 //   });
 // });
 
-router.get("/", (req, res) => {
+router.get("/blogpage", (req, res) => {
   db.Blog.findAll({}).then(function (dbBlog) {
-    res.render("index", {blog: dbBlog});
+    res.render("blogpage", {blog: dbBlog});
   });
 });
 
@@ -41,6 +41,10 @@ router.get("/artist-dash", (req, res) => {
 
 router.get("/artist-post", (req, res) => {
   res.render("artist-post");
+});
+
+router.get("/blogpage", (req, res) => {
+  res.render("blogpage");
 });
 
 router.get("/login", function (req, res) {
