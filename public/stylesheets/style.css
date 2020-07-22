@@ -1,21 +1,7 @@
-.profileImage-cover {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 20px;
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h1 {
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
-  font-weight: bold;
+body{
+  background-image: url(../Assets/trial.jpg);
+  background-position: center top;
+  background-size: 100% auto;
 }
 
 .fromtop {
@@ -26,9 +12,37 @@ h2 {
   margin-top: 50px;
   color:#fff;
   opacity: 90%;
-  text-shadow:1px 1px 7px #f2f2f2, 1px 1px 7px #fff;
+  text-shadow:1px 1px 6px #f2f2f2, 1px 1px px #fff;
   font-size:48px;
   text-align:center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.titleName {
+  font-family: 'Righteous', cursive;
+  font-size: 30px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.shift {
+  margin-top: 37px;
+}
+
+#search {
+  background-color: peachpuff;
+  border-radius: 25px;
+  margin-right: 200px;
+}
+
+.cash {
+  opacity: 92%;
 }
 
 .banks {
@@ -39,43 +53,18 @@ h2 {
   border-radius: 10px;
 }
 
-.cash {
-  opacity: 92%;
-}
-
-.shift {
-  margin-top: 40px;
-}
-
-.main {
-  border-radius: 0px;
-}
-
-#search {
-  background-color: peachpuff;
-  border-radius: 25px;
-  justify-content: 100%;
-}
-
-.round {
-  border-radius: 25px;
-}
-
-.loginColor {
-  color: white;
-}
-
-body{
-  background-image: url(../Assets/paintaf.png);
-  background-position: center top;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+#featured-artists {
+  font-weight:bold;
 }
 
 #artist-name  {
   text-align:left;
 }
 
-#featured-artists {
-  font-weight:bold;
+.loginColor {
+  color: white;
+}
+
+.round {
+  border-radius: 25px;
 }

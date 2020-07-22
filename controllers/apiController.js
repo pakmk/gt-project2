@@ -6,8 +6,6 @@ const router = express.Router();
 var db = require("../models");
 var passport = require("../config/passport");
 
-// var User = require("../models/users.js");
-
 // module.exports = function() {
 // Using the passport.authenticate middleware with our local strategy.
 // If the user has valid login credentials, send them to the members page.
@@ -58,7 +56,8 @@ router.post("/api/artist-dash", function (req, res) {
 //Artist posts
 router.post("/api/posts", function (req, res) {
   console.log(req.body);
-  db.Post.create({
+  db.Blog.create({
+    id: req.body.id,
     title: req.body.title,
     body: req.body.body,
   })
@@ -76,7 +75,7 @@ router.post("/api/posts", function (req, res) {
 router.get("/logout", function (req, res) {
   req.logout();
   res.redirect("/login");
-  alert("You Have Logged Out!");
+  // alert("You Have Logged Out!");
 });
 
 // Route for getting some data about our user to be used client side
@@ -93,6 +92,5 @@ router.get("/api/user_data", function (req, res) {
     });
   }
 });
-// };
 
 module.exports = router;

@@ -11,15 +11,15 @@ $(document).ready(function () {
       title: titleInput.val().trim(),
       body: textInput.val().trim(),
     };
-    console.log(userData);
+    // console.log(userData);
     // artistPost();
     var title = userData.title;
     var body = userData.body;
-    console.log(title);
-    console.log(body);
+    // console.log(title);
+    // console.log(body);
     artistPost(title, body);
     return userData;
-  });
+
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
@@ -29,9 +29,9 @@ $(document).ready(function () {
       body: body,
     })
       .then(function (data) {
-        // console.log(data)
+        console.log(data)
         //   res.redirect("/")
-        //   window.location.replace("/");
+        window.location.replace("/blogpage");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
@@ -39,4 +39,5 @@ $(document).ready(function () {
   function handleLoginErr(err) {
     alert("You Made a Post!");
   }
+});
 });

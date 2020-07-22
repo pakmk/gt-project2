@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-var connection = require("../config/config.json");
-var sequelize = require("sequelize");
+// var connection = require("../config/config.json");
+// var sequelize = require("sequelize");
 const db = require("../models");
 
 router.get("/", (req, res) => {
@@ -11,15 +11,15 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/", (req, res) => {
-  db.Media.findAll({}).then(function (dbMedia) {
-    res.render("index", {media: dbMedia});
-  });
-});
+// router.get("/", (req, res) => {
+//   db.Media.findAll({}).then(function (dbMedia) {
+//     res.render("index", {media: dbMedia});
+//   });
+// });
 
-router.get("/", (req, res) => {
-  db.Post.findAll({}).then(function (dbPost) {
-    res.render("index", {post: dbPost});
+router.get("/blogpage", (req, res) => {
+  db.Blog.findAll({}).then(function (dbBlog) {
+    res.render("blogpage", {blog: dbBlog});
   });
 });
 
@@ -43,6 +43,10 @@ router.get("/artist-post", (req, res) => {
   res.render("artist-post");
 });
 
+router.get("/blogpage", (req, res) => {
+  res.render("blogpage");
+});
+
 router.get("/login", function (req, res) {
   console.log(req.user);
   // If the user already has an account send them to the members page
@@ -57,6 +61,10 @@ router.get("/login", function (req, res) {
 // If a user who is not logged in tries to access this route they will be redirected to the signup page
 router.get("/artist-dash", isAuthenticated, function (req, res) {
   res.render("/artist-dash");
+});
+
+router.get("/artist-post", isAuthenticated, function (req, res) {
+  res.render("/artist-post");
 });
 
 module.exports = router;

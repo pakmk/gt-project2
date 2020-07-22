@@ -1,0 +1,54 @@
+<!--Navbar-->
+<nav class="navbar navbar-light secondary-color-dark navbar-1 ">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand text-white" href="/">Creative Meet</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler btn peach-gradient" type="button" data-toggle="collapse"
+    data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false"
+    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/artist-dash">My Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/signup">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a </li>
+    </ul>
+    <!-- Links -->
+  </div>
+  <!-- Collapsible content -->
+</nav>
+
+<div class="container cash shift deep-orange lighten-2">
+  <div class="row-just-content-md-center">
+    <br>
+    <div class="col-md-12 banks">
+      <h3 id="featured-artists">Artists' Posts</h3>
+      {{#each blog}}
+      {{!-- {{log dataValues}} --}}
+        <ul>
+          <li>
+            <p id="artist-name">Artist: {{this.dataValues.title}}</p>
+            <p id="artist-name">Comments: {{this.dataValues.body}}</p>
+          </li>
+        </ul>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
