@@ -6,8 +6,6 @@ const router = express.Router();
 var db = require("../models");
 var passport = require("../config/passport");
 
-// var User = require("../models/users.js");
-
 // module.exports = function() {
 // Using the passport.authenticate middleware with our local strategy.
 // If the user has valid login credentials, send them to the members page.
@@ -94,6 +92,5 @@ router.get("/api/user_data", function (req, res) {
     });
   }
 });
-// };
 
 module.exports = router;
