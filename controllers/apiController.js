@@ -59,6 +59,7 @@ router.post("/api/artist-dash", function (req, res) {
 router.post("/api/posts", function (req, res) {
   console.log(req.body);
   db.Blog.create({
+    id: req.body.id,
     title: req.body.title,
     body: req.body.body,
   })
@@ -76,7 +77,7 @@ router.post("/api/posts", function (req, res) {
 router.get("/logout", function (req, res) {
   req.logout();
   res.redirect("/login");
-  alert("You Have Logged Out!");
+  // alert("You Have Logged Out!");
 });
 
 // Route for getting some data about our user to be used client side
