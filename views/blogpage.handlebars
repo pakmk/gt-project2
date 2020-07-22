@@ -39,17 +39,16 @@
     <br>
     <div class="col-md-12 banks">
       <h3 id="featured-artists">Artists' Posts</h3>
-     {{#each blog}}
-     {{!-- {{log dataValues}} --}}
-      <ul>
-        <li>
-          <p id="artist-name">Artist: {{this.dataValues.title}}</p>
-          <p id="artist-name">Comments: {{this.dataValues.body}}</p>
-        </li>
-      </ul>
+      {{#each blog}}
+      {{!-- {{log dataValues}} --}}
+        <ul>
+          <li>
+            <p id="artist-name">Artist: {{this.dataValues.title}}</p>
+            <p id="artist-name">Comments: {{this.dataValues.body}}</p>
+          </li>
+        </ul>
       {{/each}}
     </div>
   </div>
-  <br>
 </div>
 
