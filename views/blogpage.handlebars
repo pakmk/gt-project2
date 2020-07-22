@@ -1,80 +1,81 @@
 <!--Navbar-->
 <nav class="navbar navbar-light secondary-color-dark navbar-1 ">
+
   <!-- Navbar brand -->
   <a class="navbar-brand text-white" href="/">Creative Meet</a>
+
   <!-- Collapse button -->
   <button class="navbar-toggler btn peach-gradient" type="button" data-toggle="collapse"
     data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false"
     aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
   <!-- Collapsible content -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link text-white" href="/">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/artist-dash">My Profile</a>
+        <a class="nav-link" href="/artist-dash">My Profile</a>
+      </li>
+      {{!-- <li class="nav-item">
+        <a class="nav-link" href="/artist-post">Make a Post</a>
+      </li> --}}
+      <li class="nav-item">
+        <a class="nav-link" href="/signup">Sign Up</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/blogpage">Blog Page</a>
+        <a class="nav-link" href="/login">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/signup">Sign Up</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="/login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="/logout">Logout</a </li>
+        <a class="nav-link" href="/logout">Logout</a </li>
     </ul>
     <!-- Links -->
+
   </div>
   <!-- Collapsible content -->
-</nav>
-<!--/.Navbar-->
 
+</nav>
+<br><br><br>
+<!--/.Navbar-->
 {{!-- <div class="container">
-  <h1 class="fromtop">Search for Artists<br><i class="fa fa-music" aria-hidden="true"></i> <i class="fa fa-paint-brush"
+  <h1 class="fromtop">Search for Artists<i class="fa fa-music" aria-hidden="true"></i> <i class="fa fa-paint-brush"
       aria-hidden="true"></i> <i class="fa fa-camera" aria-hidden="true"></i> <i class="fa fa-film"
       aria-hidden="true"></i></h1>
-</div>
-<br>
-<div class="container shift">
-  <div class="nav-wrapper row">
-    <form>
-      <div class="input-field">
-        <input type="search" id="search" class="form-control mb-4">
-        <label class="label-icon" for="search">
-          <i class="material-icons"></i></label> <i class="material-icons"></i> </div>
+  </div>
+  <br>
+  <div class="container shift">
+    <div class="nav-wrapper row">
+      <form>
+        <div class="input-field">
+          <input type="search" id="search" class="form-control mb-4">
+          <label class="label-icon" for="search">
+            <i class="material-icons"></i></label> <i class="material-icons"></i> </div>
         <button class="btn waves-effect waves-light btn peach-gradient" type="submit" name="action">Search
           <i class="material-icons right"></i>
         </button>
-      </div>
-    </form>
-  </div> 
-</div> --}}
+        </form>
+    </div> --}}
+
 <div class="container cash deep-orange lighten-2">
   <div class="row-just-content-md-center">
-  <br>
-  </div>
-  <div class="row-just-content-md-center">
+    <br>
     <div class="col-md-12 banks">
-      <h3 id="featured-artists">Artists You Might Enjoy!</h3>
-      {{#each artists}}
-      {{!-- {{log dataValues}} --}}
+      <h3 id="featured-artists">Artists Comments</h3>
+     {{#each blog}}
+     {{!-- {{log dataValues}} --}}
       <ul>
         <li>
           {{!-- <p id="artist-name">ID: {{this.dataValues.id}}</p> --}}
-          <p id="artist-name">Name: {{this.dataValues.name}}</p>
-          <p id="artist-name">Title: {{this.dataValues.bio}}</p>
-          <p id="artist-name">Works: <a href='{{this.dataValues.works}}'>{{this.dataValues.works}}</a></p>
+          <p id="artist-name">Artist: {{this.dataValues.title}}</p>
+          <p id="artist-name">Comments: {{this.dataValues.body}}</p>
         </li>
       </ul>
       {{/each}}
     </div>
-    <br>
-  {{!-- {{log artists}} --}}
-
-
+  </div>
+  <br>
 </div>
+
