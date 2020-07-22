@@ -59,4 +59,8 @@ router.get("/artist-dash", isAuthenticated, function (req, res) {
   res.render("/artist-dash");
 });
 
+router.get("/artist-post", isAuthenticated, function (req, res) {
+  res.render("/artist-post");
+});
+
 module.exports = router;
